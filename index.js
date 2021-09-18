@@ -11,7 +11,7 @@ const dbURI = 'mongodb+srv://stige:stige@stige-week7-mogodb-basi.cttbz.mongodb.n
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
     //console.log("result: of DBURI:- ", result);
-    app.listen(5000);
+    app.listen(process.env.PORT || 5000);
   })
   .catch(err => console.log(err));
 
